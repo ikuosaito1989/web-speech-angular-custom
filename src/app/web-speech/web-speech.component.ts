@@ -15,12 +15,12 @@ export class WebSpeechComponent implements OnInit {
   finalTranscript = '';
   recognizing = false;
   notification: string;
-  languages: string[] =  ['en-US', 'es-ES'];
+  languages: string[] = ['ja-JP'];
   currentLanguage: string;
   actionContext: ActionContext = new ActionContext();
 
   constructor(private changeDetector: ChangeDetectorRef,
-              private speechRecognizer: SpeechRecognizerService) { }
+    private speechRecognizer: SpeechRecognizerService) { }
 
   ngOnInit() {
     this.currentLanguage = this.languages[0];
